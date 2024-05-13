@@ -36,9 +36,7 @@ public class VendasApplication {
             clientes.buscarPorNome("Lira").forEach(System.out::println);
 
             System.out.println("Deletando Clientes");
-            clientes.obterTodos().forEach(c -> {
-                clientes.deletar(c);
-            });
+            clientes.obterTodos().forEach(clientes::deletar);
 
             todosClientes = clientes.obterTodos();
             if (todosClientes.isEmpty()) {
